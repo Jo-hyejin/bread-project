@@ -44,8 +44,6 @@ public class ReplyController {
 	public String replyProcess(@PathVariable("no")int no,ReplyVO reply, HttpSession session) {
 		System.out.println(reply);
 		replyService.writeByNo(reply);
-		List<ReplyVO> replyList = replyService.selectByNo(no);
-		session.setAttribute("replyList", replyList);
 		return "redirect:/review/{no}";
 	}
 	
