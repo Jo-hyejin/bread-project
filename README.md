@@ -1,3 +1,5 @@
+![22_Logo](https://user-images.githubusercontent.com/63994312/123757177-a9f7a400-d8f8-11eb-9c79-e33234437410.jpg)
+
 # bread-project
 카카오맵 API를 사용한 위치기반 빵집정보 제공 웹사이트   
 Spring 프레임워크, mvc패턴 사용
