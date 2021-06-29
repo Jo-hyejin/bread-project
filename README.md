@@ -5,7 +5,7 @@
 Spring 프레임워크, mvc패턴 사용
 
 ## 사용 기술(개발환경&사용언어)
-JAVA, JSP, CSS, Javascript, Eclipse, Oracle DB(SQL Developer) ....
+JAVA, JSP, CSS, Javascript, Eclipse, Oracle DB(SQL Developer), Apatch Tomcat(서버) ....
 
 ## 구현한 기능
 1. 로그인 __(성공)__
