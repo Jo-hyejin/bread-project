@@ -16,8 +16,8 @@
 		}
 	}
 	
-	function btnDelete(String userId){
-		location.href='${ pageContext.request.contextPath }/reply/';
+	function btnDelete(replyNo){
+		location.href='${ pageContext.request.contextPath }/reply/delete?replyNo='+replyNo+"&storeNo=${ storeNo }";
 	}
 </script>
 <style>
@@ -91,7 +91,7 @@
 					<td style="width: 20%; text-align:right">${ reply.regDate }
 						<c:if test="${ not empty userVO }">
 							<c:if test="${ userVO.userid eq reply.userId }">
-							   <button class="button btnDelete" onclick="replyDelete()">X</button>
+							   <button class="button btnDelete" onclick="btnDelete(${ reply.no })">X</button>
 							</c:if>
 						</c:if>
 					</td>

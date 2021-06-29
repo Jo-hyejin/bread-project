@@ -26,8 +26,8 @@ public class ReplyDAOImpl implements ReplyDAO {
 	}
 
 	@Override
-	public void deleteByNo(ReplyVO reply) {
-		sqlSession.delete("reply.dao.ReplyDAO.deleteByNo" ,reply);
+	public void deleteByNo(int no) {
+		sqlSession.delete("reply.dao.ReplyDAO.deleteByNo" ,no);
 	}
 
 }

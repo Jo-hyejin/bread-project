@@ -32,7 +32,7 @@
 	<delete id="deleteByNo" parameterType="ReplyVO">
 		delete
 		  from t_reply
-		 where no = #{no}, userid = #{userId}
+		 where no = #{no}
 	</delete>
 
 </mapper>

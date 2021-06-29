@@ -10,6 +10,6 @@ public interface ReplyDAO {
 	
 	public void writeByNo(ReplyVO reply);
 	
-	public void deleteByNo(ReplyVO reply);
+	public void deleteByNo(int no);
 	
 }

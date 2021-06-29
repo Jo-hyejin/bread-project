@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.co.bread.member.vo.MemberVO;
 import kr.co.bread.reply.service.ReplyService;
@@ -46,5 +47,14 @@ public class ReplyController {
 		List<ReplyVO> replyList = replyService.selectByNo(no);
 		session.setAttribute("replyList", replyList);
 		return "redirect:/review/{no}";
+	}
+	
+	@RequestMapping(value="/reply/delete")
+	public String deleteByNo(@RequestParam("replyNo")int replyNo,@RequestParam("storeNo") int storeNo ){
+		
+		System.out.println("ReplyController.deleteByNo.replyN: "+replyNo);
+		System.out.println("ReplyController.deleteByNo.storeNo: "+storeNo);
+		replyService.deleteByNo(replyNo);
+		return "redirect:/review/"+storeNo;
 	}
 }

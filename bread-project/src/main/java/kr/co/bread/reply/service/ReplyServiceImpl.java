@@ -26,8 +26,8 @@ public class ReplyServiceImpl implements ReplyService {
 	}
 
 	@Override
-	public void deleteByNo(ReplyVO reply) {
-		replyDAO.deleteByNo(reply);
+	public void deleteByNo(int no) {
+		replyDAO.deleteByNo(no);
 	}
 
 }
