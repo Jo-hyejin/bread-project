@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="member.dao.MemberDAO"><!-- Mapper별 패키지 -->
+
+	<insert id="insert" parameterType="MemberVO">
+		insert into t_member(userid, username, password, email, phone1, phone2, phone3)
+		VALUES(#{userid}, #{username}, #{password}, #{email}, #{phone1}, #{phone2}, #{phone3})
+	</insert>
+	
+	<select id="login" parameterType="MemberVO" resultType="MemberVO">
+		select userid, username, password, email, phone1, phone2, phone3
+		  from t_member
+		 where userid = #{userid} and password = #{password}
+	</select>
+	
+	<update id="modify" parameterType="MemberVO">
+		update t_member 
+		   set username = #{username}
+		   	 , password = #{password}
+		   	 , email = #{email}
+		   	 , phone1 = #{phone1}
+		   	 , phone2 = #{phone2}
+		   	 , phone3 = #{phone3}
+		 where userid = #{userid}
+	</update>
+	
+	<select id="selectUser" parameterType="MemberVO" resultType="MemberVO">
+		select userid, username, password, email, phone1, phone2, phone3
+		  from t_member
+		 where userid = #{userid}
+	</select>
+
+</mapper>
