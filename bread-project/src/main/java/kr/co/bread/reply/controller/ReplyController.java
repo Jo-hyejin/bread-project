@@ -51,7 +51,6 @@ public class ReplyController {
 	
 	@RequestMapping(value="/reply/delete")
 	public String deleteByNo(@RequestParam("replyNo")int replyNo,@RequestParam("storeNo") int storeNo ){
-		
 		System.out.println("ReplyController.deleteByNo.replyN: "+replyNo);
 		System.out.println("ReplyController.deleteByNo.storeNo: "+storeNo);
 		replyService.deleteByNo(replyNo);
