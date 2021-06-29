@@ -15,6 +15,7 @@ Spring 프레임워크, mvc패턴 사용
 10. QnA
 11. 본인이 작성한 댓글 모아보기
 12. 빵집 즐겨찾기
+13. 빵집 알림
 
 ## ERD
 ![image](https://user-images.githubusercontent.com/63994312/123755133-90edf380-d8f6-11eb-8359-2bc5be1e2759.png)
